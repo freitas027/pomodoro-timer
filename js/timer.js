@@ -14,7 +14,9 @@ class Timer extends React.Component {
         // Pomodoro state can be p (pomodoro), s(short break), l (long break)
         pomodoroState: "p",
         pomodoroCounter: 0,
-    };
+    }
+    setTheme('theme-pomodoro');
+    ;
     this.timer = this.timer.bind(this)
     //let intervalId = setInterval(this.timer, 1000)
   }
@@ -75,19 +77,21 @@ class Timer extends React.Component {
   setPomodoroState(state){
       if (state ==="p" && this.state.pomodoroState !== 'p'){
         this.setState({pomodoroState: state, timeLeft: 25*60, running: false});
-
+        setTheme('theme-pomodoro');
       }
       else if (state === 's' && this.state.pomodoroState !== 's'){
         this.setState({pomodoroState: state, timeLeft: 5*60, running: false});
+        setTheme('theme-short-break');
       }
       else if (state === 'l' && this.state.pomodoroState !== 'l'){
         this.setState({pomodoroState: state, timeLeft: 15*60, running: false});
+        setTheme('theme-long-break');
       }
         
   }
   render() {
     return (
-        <div className="box box-timer">
+        <div className="box">
                 <div className="flex-row">
                     <button className={this.getPomodoroClassName('p')} onClick={() => this.setPomodoroState('p')}>Pomodoro</button>
                     <button className={this.getPomodoroClassName('s')} onClick={() => this.setPomodoroState('s')}>Short Break</button>
@@ -100,6 +104,7 @@ class Timer extends React.Component {
                 </div>
             </div>
         </div>
+        
             );
   }
 }
@@ -110,6 +115,13 @@ function localeTwoDigits (number){
         useGrouping: false,
     });
 }
+
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
 
 const domContainer = document.querySelector('#timer');
 ReactDOM.render(e(Timer), domContainer);
