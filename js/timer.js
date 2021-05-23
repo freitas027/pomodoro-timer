@@ -23,7 +23,6 @@ class Timer extends React.Component {
         let now = Date.now();
         let diff = (now - this.state.currentTime)/1000;
         let timeLeft = this.state.timeLeft-diff;
-        console.log(timeLeft)
         if (timeLeft<=0){
             this.runOut();
         }else {

@@ -3,7 +3,7 @@ html, body, h1 {
     font-family: 'Farro', sans-serif;
     padding: 0;
     margin:0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
