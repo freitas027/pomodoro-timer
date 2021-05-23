@@ -2,6 +2,10 @@
 
 <html>
     <head>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="js/timer.js" type="text/babel"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Farro&display=swap" rel="stylesheet">
         <link href="css/index.css" rel="stylesheet">
@@ -10,19 +14,7 @@
     <body>
         <div class="main">
             <header>Pomodoro Timer</header>
-            <div class="box">
-                <div class="flex-row">
-                    <button class="small-button">Pomodoro</button>
-                    <button class="small-button">Short Break</button>
-                    <button class="small-button">Long Break</button>
-                </div>
-                <div class="flex-column timer">25:00</div>
-            </div>
-            <div id="buttons" class="flex-row">
-                <div class="box">
-                    <button>Start</button>
-                </div>
-            </div>
+            <div id="timer"></div>
         </div>
     </body>
 </html>
