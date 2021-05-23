@@ -1,0 +1,85 @@
+
+html, body, h1 {
+    font-family: 'Farro', sans-serif;
+    padding: 0;
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    display:flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.main {
+    flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    background-color: rgb(219, 82, 77);
+}
+
+header {
+    display: flex;
+    align-self: center;
+    font-size: 6vw;
+    border-bottom: 1px solid rgb(195, 82, 77);
+    margin-bottom: 0.5em;
+}
+@media screen and (max-width: 1000px){
+    
+}
+.box {
+    border-radius: 6px;
+    background-color: rgb(233, 100, 95);
+    margin-left:20px;
+}
+
+.flex-column {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-row {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-size: 15vmax;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px
+}
+
+button {
+    background-color: white;
+    border: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw;
+    border-radius: 6px;
+    color: rgb(233, 100, 95);
+    padding: 0px 25px 0px 20px;
+    cursor: pointer;
+}
+
+.small-button {
+    background-color: white;
+    border: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: max(16px, 2vw);
+    border-radius: 6px;
+    color: rgb(233, 100, 95);
+    padding: 0px 5px 0px 5px;
+    margin: 10px;
+    cursor: pointer;
+}
